@@ -12,9 +12,10 @@ If you came here looking for a resume, you're out of luck, but I can provide on 
 
 #### Editing and Deploying
 
-1. Edit files either on github or locally and check in changes to master
-2. Pull the latest changes to local (only applies if you made the edits on github)
-3. Run `yarn deploy`
+1. Edit files either on github or locally and check in changes to master.
+2. Pull the latest changes to local (only applies if you made the edits on github).
+3. Push local changes to a remote branch.
+4. Open a pull request, review changes then merge.
 4. Profit
 
 
