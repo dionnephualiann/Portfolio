@@ -24,17 +24,15 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run deploy
-      - run:
-          name: Install and configure dependencies
-          command: |
-            git config user.email "ci-build@dionnephualiann.com"
-            git config user.name "ci-build"
       - add_ssh_keys:
           fingerprints:
             - "d4:ab:d2:a3:ed:58:6c:33:0b:15:6b:46:19:22:2a:28"
       - run:
           name: Deploy docs to gh-pages branch
-          command: CI=false yarn deploy
+          command: | 
+            git config user.email "ci-build@dionnephualiann.com"
+            git config user.name "ci-build"
+            CI=false yarn deploy
           
 workflows:
   version: 2
