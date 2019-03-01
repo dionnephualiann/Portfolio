@@ -34,7 +34,7 @@ jobs:
             - "d4:ab:d2:a3:ed:58:6c:33:0b:15:6b:46:19:22:2a:28"
       - run:
           name: Deploy docs to gh-pages branch
-          command: yarn deploy
+          command: CI=false yarn deploy
           
 workflows:
   version: 2
