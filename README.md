@@ -1,5 +1,7 @@
 **This repo contains the code for running and deploying my personal portfolio website.**
 
+[![CircleCI](https://circleci.com/gh/dionnephualiann/Portfolio.svg?style=svg)](https://circleci.com/gh/dionnephualiann/Portfolio)
+
 ### Stuff for visitors
 
 The actual website can be found [here](http://www.dionnephua.com/#/). I encourage you to check it out if you are interested in working with me.
