@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  build:
+  build-site:
     docker:
       - image: circleci/node:8.10 
     steps:
@@ -27,9 +27,21 @@ jobs:
       - run:
           name: Install and configure dependencies
           command: |
-            npm install -g --silent gh-pages@2.0.1
-            git config user.email "ci-build@klukas.net"
+            git config user.email "ci-build@dionnephualiann.com"
             git config user.name "ci-build"
+      - add_ssh_keys:
+        fingerprints:
+          - "d4:ab:d2:a3:ed:58:6c:33:0b:15:6b:46:19:22:2a:28"
       - run:
           name: Deploy docs to gh-pages branch
           command: yarn deploy
+          
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build-site:
+        filters:
+          branches:
+            only: master
+        
