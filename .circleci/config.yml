@@ -30,8 +30,8 @@ jobs:
       - run:
           name: Deploy docs to gh-pages branch
           command: | 
-            git config user.email "ci-build@dionnephualiann.com"
-            git config user.name "ci-build"
+            git config --global user.email "ci-build@dionnephua.com"
+            git config --global user.name "ci-build"
             CI=false yarn deploy
           
 workflows:
